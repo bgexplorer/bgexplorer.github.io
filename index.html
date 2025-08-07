@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BG Explorer</title>
   <style>
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: Arial, sans-serif;
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
     }
 
     header {
+      position: fixed;
+      width: 100%;
       background: rgba(0, 0, 0, 0.6);
       color: white;
-      padding: 1rem;
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      z-index: 999;
       display: flex;
       justify-content: center;
       gap: 2rem;
+      padding: 1rem;
+      z-index: 10;
     }
 
     header a {
@@ -33,19 +35,17 @@
     }
 
     section {
-      height: 100vh;
-      padding: 100px 20px 20px 20px;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
     }
 
     #hero {
-      background-image: url('https://source.unsplash.com/1600x900/?belgrade');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      background: url('https://images.unsplash.com/photo-1603650140156-e7a5f9d35e21') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      color: white;
       text-align: center;
     }
 
@@ -54,13 +54,40 @@
       text-shadow: 2px 2px 5px black;
     }
 
+    #hero p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: hotpink;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
     #about, #gallery, #contact {
-      background: #f4f4f4;
+      background: #f0f0f0;
     }
 
     h2 {
       text-align: center;
       margin-bottom: 1rem;
+      color: #333;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1em;
     }
 
     .gallery-imgs {
@@ -68,6 +95,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 1rem;
     }
 
     .gallery-imgs img {
@@ -80,19 +108,23 @@
     footer {
       text-align: center;
       padding: 1rem;
-      background: #333;
+      background: #222;
       color: white;
     }
 
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: center;
         gap: 0.5rem;
+        padding: 10px;
       }
 
       #hero h1 {
         font-size: 2em;
+      }
+
+      .btn {
+        width: 80%;
       }
     }
   </style>
@@ -107,34 +139,33 @@
   </header>
 
   <section id="hero">
-    <h1>Dobrodošli na BG Explorer</h1>
-    <p>Vaš vodič kroz Beograd</p>
+    <h1>Zdravo, ovo je BG Explorer</h1>
+    <p>Besplatno postavljeno uz GitHub Pages 🚀</p>
+    <a href="https://bgexplorer.weebly.com/" class="btn" target="_blank">Idi na Weebly sajt</a>
   </section>
 
   <section id="about">
     <h2>O nama</h2>
-    <p style="max-width: 600px; margin: auto;">
-      BG Explorer je projekat posvećen istraživanju Beograda. Bilo da ste turista ili lokalac, ovde ćete pronaći zanimljive lokacije, priče i preporuke.
-    </p>
+    <p>BG Explorer je zamišljen kao digitalni vodič za istraživanje zanimljivih lokacija u Beogradu. Pomažemo ti da otkriješ skrivene dragulje našeg grada!</p>
   </section>
 
   <section id="gallery">
     <h2>Galerija</h2>
     <div class="gallery-imgs">
-      <img src="https://source.unsplash.com/300x200/?belgrade" />
-      <img src="https://source.unsplash.com/301x200/?beograd" />
-      <img src="https://source.unsplash.com/302x200/?city,serbia" />
-      <img src="https://source.unsplash.com/303x200/?balkan" />
+      <img src="https://source.unsplash.com/300x200/?belgrade" alt="">
+      <img src="https://source.unsplash.com/301x200/?kalemegdan" alt="">
+      <img src="https://source.unsplash.com/302x200/?skadarlija" alt="">
+      <img src="https://source.unsplash.com/303x200/?beograd" alt="">
     </div>
   </section>
 
   <section id="contact">
     <h2>Kontakt</h2>
-    <p style="text-align: center;">Pišite nam na <a href="mailto:bgexplorer@gmail.com">bgexplorer@gmail.com</a></p>
+    <p>Za pitanja, pišite nam na <a href="mailto:bgexplorer@gmail.com">bgexplorer@gmail.com</a></p>
   </section>
 
   <footer>
-    © 2025 BG Explorer
+    © 2025 BG Explorer. Sva prava zadržana.
   </footer>
 
 </body>
