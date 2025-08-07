@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BG Explorer</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+    }
+
+    #hero {
+      background: url('https://images.unsplash.com/photo-1603650140156-e7a5f9d35e21') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #hero h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    #hero p {
+      font-size: 1.2em;
+      margin: 10px 0;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .btn {
+      background-color: #ff4081;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1em;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #e91e63;
+    }
+
+    #about, #gallery, #contact {
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    .gallery-imgs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery-imgs img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery-imgs img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      #hero h1 {
+        font-size: 2em;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#hero">Početna</a>
+    <a href="#about">O nama</a>
+    <a href="#gallery">Galerija</a>
+    <a href="#contact">Kontakt</a>
+  </header>
+
+  <section id="hero">
+    <h1>Zdravo, ovo je BG Explorer</h1>
+    <p>Postavljeno uz GitHub Pages 🚀</p>
+    <a href="https://bgexplorer.weebly.com/" class="btn" target="_blank">Idi na Weebly sajt</a>
+  </section>
+
+  <section id="about">
+    <h2>O nama</h2>
+    <p>BG Explorer je zamišljen kao digitalni vodič za istraživanje zanimljivih lokacija u Beogradu. Pomažemo ti da otkriješ skrivene dragulje našeg grada!</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Galerija</h2>
+    <div class="gallery-imgs">
+      <img src="https://source.unsplash.com/random/300x200/?belgrade" alt="Beograd">
+      <img src="https://source.unsplash.com/random/300x200/?kalemegdan" alt="Kalemegdan">
+      <img src="https://source.unsplash.com/random/300x200/?beograd" alt="Beograd 2">
+      <img src="https://source.unsplash.com/random/300x200/?cityscape" alt="Panorama">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Pišite nam na <a href="mailto:bgexplorer@gmail.com">bgexplorer@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 BG Explorer
+  </footer>
+
+</body>
+</html>
